@@ -5,8 +5,6 @@ public class ChoHanGame {
 	public static void main(String[] args) {
 		String player1 = "BOB";
 		String player2 = "James";
-		String guess1 = "";
-		String guess2 = "";
 		int points1 = 0;
 		int points2 = 0;
 		
@@ -15,8 +13,10 @@ public class ChoHanGame {
 			int d1 = dice1.getDiceRoll1();
 			int d2 = dice1.getDiceRoll2();
 			
-			guess1 = JOptionPane.showInputDialog("Cho or Han: ");
-			guess2 = JOptionPane.showInputDialog("Cho or Han: ");
+			String guess1 = JOptionPane.showInputDialog("Cho or Han: ");
+			System.out.println(guess1);
+			String guess2 = JOptionPane.showInputDialog("Cho or Han: ");
+			System.out.println(guess2);
 			
 			Announcement announce = new Announcement (player1, guess1, player2, guess2, d1, d2, points1, points2);
 			points1 = announce.getPoints(player1);
