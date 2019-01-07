@@ -1,0 +1,26 @@
+
+public class Loaded {
+	
+	char loaded;
+	
+	public Loaded () {
+		setLoaded();
+	}
+
+	private void setLoaded() {
+		int random = (int) (Math.random() * 10000) + 1;
+		
+		if (random % 2 == 0) {
+			loaded = 'y';
+		}else {
+			loaded = 'n';
+		}
+	}
+	
+	public char getLoaded() {
+		return loaded;
+	}
+	
+	
+	
+}
